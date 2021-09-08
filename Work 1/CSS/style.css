@@ -89,7 +89,7 @@ body{
 }
 body{
 	display: grid;
-	height: 100vh;
+	height: 100vh;	
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: repeat(3, 1fr);
 }

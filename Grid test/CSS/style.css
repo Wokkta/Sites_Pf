@@ -1,0 +1,77 @@
+@import url(reset.css);
+*{
+	box-sizing: border-box;
+}
+body{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	height: 100vh;
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-areas: 
+	'header header header'
+	'aside content content'
+	'footer footer footer';
+	grid-gap: 2px;
+}
+div,header,footer{
+	background-color: #009070;
+	font-size: 22px;
+	font-family: sans-serif;
+	font-weight: 700;
+	border:  2px solid black;
+	display: flex;
+	border-radius: 5px;
+	justify-content: center;
+	align-items: center;
+}
+div,header,footer:nth-child(even){
+	background-color: #00CCA0;
+}
+header{
+	background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.m94WGQGcUBt81SP157qugAHaDF%26pid%3DApi&f=1);
+	display: flex;
+	background-size:cover ;
+	background-position:center;
+	justify-content: space-around;
+	align-items: center;
+	grid-area: header;
+	grid-column: 1/7;
+}
+
+li,a{
+	text-decoration: none;
+
+}
+.aside{
+	background-color: black;
+	color: white;
+	grid-area: aside;
+	grid-row:  2/6;
+	counter-reset: list;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+h3::after{
+	content: counter(list);
+	counter-increment: list;
+	}
+.content{
+	background-color: white;
+	grid-area: content;
+	grid-row: 2/6;
+	grid-column: span 5;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.content>div{
+	background-color: white;
+	border: 0;
+}
+footer{
+	grid-area: footer;
+	grid-row: span 1;
+	grid-column: 1/7;
+	display: flex;
+}
