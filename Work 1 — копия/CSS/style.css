@@ -1,0 +1,48 @@
+@import url(reset.css);
+*{
+	box-sizing: border-box;
+}
+body{
+	counter-reset: list;
+}
+.item::before{
+	content: counter(list);
+	counter-increment: list;
+}
+.item:nth-child(even){
+	background-color: #00CCA0;
+}
+.item{
+	background-color: #009070;
+	font-size: 22px;
+	font-family: sans-serif;
+	font-weight: 700;
+	border:  2px solid black;
+	display: flex;
+	border-radius: 5px;
+	justify-content: center;
+}
+.box{
+	display: grid;
+	
+	grid-template-columns:  1fr 2fr;
+	
+	grid-gap: 10px 30px;
+	grid-template-areas:
+	 'header header' 
+	 'aside content'
+	 'footer footer';
+	height: 20vh;
+}
+.header{
+	grid-area:  header;
+}
+.aside{
+	grid-area:  aside;
+}
+.content{
+	grid-area:  content;
+}
+.footer{
+	grid-area:  footer;
+}
