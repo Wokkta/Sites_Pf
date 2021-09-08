@@ -1,8 +1,36 @@
 @import url(reset.css);
-
-.slider__item{
-	height: 100vh;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+*{
+	box-sizing: border-box;
+}
+body{
+	counter-reset: list;
+}
+.item::before{
+	content: counter(list);
+	counter-increment: list;
+}
+.item:nth-child(even){
+	background-color: #00CCA0;
+}
+.item{
+	background-color: #009070;
+	font-size: 22px;
+	font-family: sans-serif;
+	font-weight: 700;
+	border:  2px solid black;
+	display: flex;
+	border-radius: 5px;
+	justify-content: center;
+}
+.box{
+	display: grid;
+	/*grid-template-columns:300px 250px 300px ; or */
+	/*grid-template-columns: 1fr 1fr 1fr;  fractions as parts of parent, this like 3 columns with w33% 
+	or you can make it responsive to content by doing grid-template-columns:  minmax(200px,400px) 1fr 1fr; */
+	/* if don't want to write every time 1fr and same stuff you can do this */grid-template-columns:  minmax(200px,400px) repeat(3, 1fr);
+	/* grid-template-rows: 100px 200px;  height + has problems with content size, opposite we can do 'next string'*/
+	grid-auto-rows: minmax(200px,auto);
+	grid-column-gap: 30px; /* distance between columns , next string is same , but for vertical*/
+	grid-row-gap: 10px;
+	/* or u can use that - grid-gap: 30px; or grid-gap:10px 30px;   */
 }
