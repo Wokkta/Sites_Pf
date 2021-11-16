@@ -1,4 +1,6 @@
 @import url(reset.css);
 header{
-	background: url('IMG/header.jpg');
+	background: url('https://github.com/Wokkta/Sites_Pf/tree/main/Сафари/IMG/header.jpg');
+	height: 100%;
+	width: 100%;
 }
