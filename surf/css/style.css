@@ -119,16 +119,12 @@ header ::after{
 .header__decor-text::before{
 	content: "";
 	z-index: -1;
-	bottom: 0;
-	left: 0;
-	right: 0;
+
 }
 .header__decor-text::after{
 	content: "";
 	z-index: -1;
-	bottom: 0;
-	left: 0;
-	right: 0;
+
 }
 .header__decor-text--one{
 	z-index: 1;
