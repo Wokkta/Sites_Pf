@@ -1,6 +1,11 @@
 @import url(reset.css);
 header{
-	background: url('https://github.com/Wokkta/Sites_Pf/tree/main/Сафари/IMG/header.jpg');
-	height: 100%;
-	width: 100%;
+	background-image: url('https://github.com/Wokkta/Sites_Pf/tree/main/Сафари/IMG/header.jpg');
+	width: 1920px;
+	height: 940px;
+	background-color: black;
+}
+.container{
+	width: 1920px;
+	height: 940px;
 }
